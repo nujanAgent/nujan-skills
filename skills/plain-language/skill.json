@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "plain-language",
+  "name": "Plain language",
+  "version": "1.0.0",
+  "description": "Rewrites a text in plain language without changing what it says.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": {
+    "keywords": ["plain language", "plain english", "simplify this", "easier to read", "make this simpler", "rewrite this simply"],
+    "slashCommand": "plain"
+  },
+  "tools": [],
+  "modelHint": "any",
+  "privacy": "allow_cloud"
+}
