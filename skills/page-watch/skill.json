@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "page-watch",
+  "name": "Page watch",
+  "version": "1.0.0",
+  "description": "Keeps watch on part of a web page: a copy saved in the workspace and a routine that checks it on a schedule and says exactly what changed.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": {
+    "keywords": ["watch this page", "watch the price", "keep an eye on this page", "monitor this page", "tell me when the price changes", "let me know when it changes"],
+    "slashCommand": "watch"
+  },
+  "tools": ["web_fetch", "open_url", "browser_read", "write_file", "read_file", "create_routine", "run_routine"],
+  "leadTool": "web_fetch",
+  "permissions": { "create_routine": "ask", "run_routine": "ask" },
+  "modelHint": "cloud",
+  "privacy": "allow_cloud"
+}
