@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "study-cards",
+  "name": "Study cards",
+  "version": "1.0.0",
+  "description": "Flip cards from your notes or a PDF, tested on the phone, with review reminders over the next week.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": {
+    "keywords": ["flashcards", "flash cards", "study cards", "quiz me on", "help me revise", "revise for my exam"],
+    "slashCommand": "cards"
+  },
+  "tools": ["read_pdf", "read_file", "create_html_artifact", "test_html_artifact", "update_artifact", "get_time", "create_reminder"],
+  "permissions": { "create_reminder": "ask" },
+  "modelHint": "cloud",
+  "privacy": "allow_cloud"
+}
