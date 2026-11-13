@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "mindmap",
+  "name": "Mind Map",
+  "version": "1.0.0",
+  "description": "Turn a topic or notes into a mind map artifact.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": { "keywords": ["mind map", "mindmap", "map out", "graphify"], "slashCommand": "mindmap" },
+  "tools": ["create_html_artifact"],
+  "modelHint": "any",
+  "privacy": "local_only"
+}
