@@ -1,0 +1,55 @@
+name: Validate skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Check the skills against this repository's rules
+        run: node tools/validate.mjs skills
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Check the skills with the Agent Skills reference validator
+        run: |
+          python -m pip install --disable-pip-version-check "skills-ref==0.1.1"
+          for skill in skills/*/; do
+            python -c "from skills_ref.cli import main; main()" validate "$skill"
+          done
+
+  sign-off:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Check that every commit is signed off
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          missing=0
+          for commit in $(git rev-list --no-merges "$BASE..$HEAD"); do
+            if ! git log -1 --format=%B "$commit" | grep -q '^Signed-off-by: '; then
+              echo "Commit $commit has no Signed-off-by line; see CONTRIBUTING.md."
+              missing=1
+            fi
+          done
+          exit $missing
