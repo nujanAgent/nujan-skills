@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "anatomy",
+  "name": "Anatomy",
+  "version": "1.0.0",
+  "description": "Draws a real system as an interactive figure to scale: researched dimensions and sources, every part named, the states it goes through, checked before it is drawn.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": {
+    "keywords": ["anatomy of", "cutaway", "draw a figure", "a figure of", "technical figure", "technical illustration", "illustrate how", "draw how", "show me how it works", "figure showing how", "interactive figure", "exploded view", "inner workings"],
+    "slashCommand": "anatomy"
+  },
+  "tools": ["deep_research", "web_search", "extract_article", "web_fetch", "create_figure", "see_artifact", "ask_user"],
+  "permissions": { "deep_research": "allow", "create_figure": "allow" },
+  "leadTool": "deep_research",
+  "then": ["create_figure"],
+  "modelHint": "cloud",
+  "privacy": "allow_cloud"
+}
