@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "trip-brief",
+  "name": "Trip brief",
+  "version": "1.0.0",
+  "description": "A city trip planned from research: day plans with real hours and prices, a PDF itinerary, booking reminders and a countdown widget.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": {
+    "keywords": ["plan a trip", "plan my trip", "trip itinerary", "itinerary for", "plan a city break", "plan a weekend in", "plan a few days in"],
+    "slashCommand": "trip"
+  },
+  "tools": ["web_search", "extract_article", "web_fetch", "create_pdf", "create_reminder", "create_widget", "pin_widget", "get_time"],
+  "leadTool": "web_search",
+  "permissions": { "create_reminder": "ask", "create_widget": "ask", "pin_widget": "ask" },
+  "modelHint": "cloud",
+  "privacy": "allow_cloud"
+}
