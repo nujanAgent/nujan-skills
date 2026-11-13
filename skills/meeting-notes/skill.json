@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "meeting-notes",
+  "name": "Meeting notes",
+  "version": "1.0.0",
+  "description": "Minutes from meeting notes: decisions, action items with owners and dates, open questions.",
+  "author": "NuJan",
+  "license": "Apache-2.0",
+  "tier": 1,
+  "triggers": {
+    "keywords": ["meeting minutes", "meeting notes", "minutes of the meeting", "sum up the meeting", "summarize the meeting", "summarise the meeting", "action items from"],
+    "slashCommand": "minutes"
+  },
+  "tools": [],
+  "modelHint": "any",
+  "privacy": "allow_cloud"
+}
