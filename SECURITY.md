@@ -16,4 +16,5 @@ This repository covers the skills and the validator. Examples of what to report:
 - a skill that passes the validator while breaking the rules in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 A useful report names the skill and the commit, gives the request that shows the problem, and describes the impact.
-A fix is made in the skill and recorded in the commit history.
+A report is acknowledged within 7 days, and within 30 days it has a fix or a plan with a date. A fix is made in the skill and
+recorded in the commit history.

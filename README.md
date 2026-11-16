@@ -1,6 +1,6 @@
 # NuJan skills
 
-How to make skills for [NuJan](https://www.nujan-agent.com), an AI agent app for Android, and install them: the
+How to make skills for [NuJan](https://nujan-agent.com), an AI agent app for Android, and install them: the
 format, a validator, and example skills to install and copy.
 
 A skill teaches NuJan a workflow. When a request matches the skill, NuJan adds the skill's instructions to the turn,
